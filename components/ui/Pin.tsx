@@ -1,8 +1,8 @@
-"use client";
-import React, { useState } from "react";
-import { motion } from "framer-motion";
+"use client"
+import React, { useState } from "react"
+import { motion } from "framer-motion"
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
 
 export const PinContainer = ({
   children,
@@ -11,60 +11,47 @@ export const PinContainer = ({
   className,
   containerClassName,
 }: {
-  children: React.ReactNode;
-  title?: string;
-  href?: string;
-  className?: string;
-  containerClassName?: string;
+  children: React.ReactNode
+  title?: string
+  href?: string
+  className?: string
+  containerClassName?: string
 }) => {
   const [transform, setTransform] = useState(
     "translate(-50%,-50%) rotateX(0deg)"
-  );
-
-  const onMouseEnter = () => {
-    setTransform("translate(-50%,-50%) rotateX(40deg) scale(0.8)");
-  };
-  const onMouseLeave = () => {
-    setTransform("translate(-50%,-50%) rotateX(0deg) scale(1)");
-  };
+  )
 
   return (
-    <div
-      className={cn(
-        "relative group/pin z-50  cursor-pointer",
-        containerClassName
-      )}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
-    >
+    <div className={cn("relative  ", containerClassName)}>
       <div
         style={{
           perspective: "1000px",
           transform: "rotateX(70deg) translateZ(0deg)",
         }}
-        className="absolute left-1/2 top-1/2 ml-[0.09375rem] mt-4 -translate-x-1/2 -translate-y-1/2"
-      >
+        className="absolute left-1/2 top-1/2 ml-[0.09375rem] mt-4 -translate-x-1/2 -translate-y-1/2">
         <div
           style={{
             transform: transform,
           }}
           // remove  bg-black
-          className="absolute left-1/2 p-4 top-1/2  flex justify-start items-start  rounded-2xl  shadow-[0_8px_16px_rgb(0_0_0/0.4)] border border-white/[0.1] group-hover/pin:border-white/[0.2] transition duration-700 overflow-hidden"
-        >
+          className="absolute left-1/2 p-4 top-1/2  flex justify-start items-start  rounded-2xl  shadow-[0_8px_16px_rgb(0_0_0/0.4)] border border-white/[0.1] ">
           <div className={cn(" relative z-50 ", className)}>{children}</div>
         </div>
       </div>
-      <PinPerspective title={title} href={href} />
+      <PinPerspective
+        title={title}
+        href={href}
+      />
     </div>
-  );
-};
+  )
+}
 
 export const PinPerspective = ({
   title,
   href,
 }: {
-  title?: string;
-  href?: string;
+  title?: string
+  href?: string
 }) => {
   return (
     // change w-96 to w-full
@@ -74,8 +61,7 @@ export const PinPerspective = ({
           <a
             href={href}
             target={"_blank"}
-            className="relative flex space-x-2 items-center z-10 rounded-full bg-zinc-950 py-0.5 px-4 ring-1 ring-white/10 "
-          >
+            className="relative flex space-x-2 items-center z-10 rounded-full bg-zinc-950 py-0.5 px-4 ring-1 ring-white/10 ">
             <span className="relative z-20 text-white text-xs font-bold inline-block py-0.5">
               {title}
             </span>
@@ -89,8 +75,7 @@ export const PinPerspective = ({
             perspective: "1000px",
             transform: "rotateX(70deg) translateZ(0)",
           }}
-          className="absolute left-1/2 top-1/2 ml-[0.09375rem] mt-4 -translate-x-1/2 -translate-y-1/2"
-        >
+          className="absolute left-1/2 top-1/2 ml-[0.09375rem] mt-4 -translate-x-1/2 -translate-y-1/2">
           <>
             <motion.div
               initial={{
@@ -110,8 +95,7 @@ export const PinPerspective = ({
                 repeat: Infinity,
                 delay: 0,
               }}
-              className="absolute left-1/2 top-1/2  h-[11.25rem] w-[11.25rem] rounded-[50%] bg-sky-500/[0.08] shadow-[0_8px_16px_rgb(0_0_0/0.4)]"
-            ></motion.div>
+              className="absolute left-1/2 top-1/2  h-[11.25rem] w-[11.25rem] rounded-[50%] bg-sky-500/[0.08] shadow-[0_8px_16px_rgb(0_0_0/0.4)]"></motion.div>
             <motion.div
               initial={{
                 opacity: 0,
@@ -130,8 +114,7 @@ export const PinPerspective = ({
                 repeat: Infinity,
                 delay: 2,
               }}
-              className="absolute left-1/2 top-1/2  h-[11.25rem] w-[11.25rem] rounded-[50%] bg-sky-500/[0.08] shadow-[0_8px_16px_rgb(0_0_0/0.4)]"
-            ></motion.div>
+              className="absolute left-1/2 top-1/2  h-[11.25rem] w-[11.25rem] rounded-[50%] bg-sky-500/[0.08] shadow-[0_8px_16px_rgb(0_0_0/0.4)]"></motion.div>
             <motion.div
               initial={{
                 opacity: 0,
@@ -150,8 +133,7 @@ export const PinPerspective = ({
                 repeat: Infinity,
                 delay: 4,
               }}
-              className="absolute left-1/2 top-1/2  h-[11.25rem] w-[11.25rem] rounded-[50%] bg-sky-500/[0.08] shadow-[0_8px_16px_rgb(0_0_0/0.4)]"
-            ></motion.div>
+              className="absolute left-1/2 top-1/2  h-[11.25rem] w-[11.25rem] rounded-[50%] bg-sky-500/[0.08] shadow-[0_8px_16px_rgb(0_0_0/0.4)]"></motion.div>
           </>
         </div>
 
@@ -163,5 +145,5 @@ export const PinPerspective = ({
         </>
       </div>
     </motion.div>
-  );
-};
+  )
+}

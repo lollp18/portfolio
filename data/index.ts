@@ -1,36 +1,27 @@
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
+  { name: "WorkExperience", link: "#workExperience" },
   { name: "Contact", link: "#contact" },
-];
+]
 
 export const gridItems = [
   {
     id: 1,
-    title: "I prioritize client collaboration, fostering open communication ",
-    description: "",
-    className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
-    imgClassName: "w-full h-full",
-    titleClassName: "justify-end",
-    img: "/b1.svg",
-    spareImg: "",
+    title: "Currently building a FullStack App Like Excel",
+    description: "The Inside Scoop",
+    className: "md:col-span-4 md:row-span-6",
+    imgClassName: "   absolute right-3 top-0 md:w-96 w-60",
+    titleClassName: "justify-center md:justify-start lg:justify-center",
+    img: "/Csv3 -c.png",
+    spareImg: "/grid.svg",
   },
-  {
-    id: 2,
-    title: "I'm very flexible with time zone communications",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-    imgClassName: "",
-    titleClassName: "justify-start",
-    img: "",
-    spareImg: "",
-  },
+
   {
     id: 3,
     title: "My tech stack",
-    description: "I constantly try to improve",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
+    description: "",
+    className: "lg:col-span-3 md:col-span-3 md:row-span-5",
     imgClassName: "",
     titleClassName: "justify-center",
     img: "",
@@ -46,63 +37,122 @@ export const gridItems = [
     img: "/grid.svg",
     spareImg: "/b4.svg",
   },
-
-  {
-    id: 5,
-    title: "Currently building a JS Animation library",
-    description: "The Inside Scoop",
-    className: "md:col-span-3 md:row-span-2",
-    imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
-    titleClassName: "justify-center md:justify-start lg:justify-center",
-    img: "/b5.svg",
-    spareImg: "/grid.svg",
-  },
-  {
-    id: 6,
-    title: "Do you want to start a project together?",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
-    imgClassName: "",
-    titleClassName: "justify-center md:max-w-full max-w-60 text-center",
-    img: "",
-    spareImg: "",
-  },
-];
+]
 
 export const projects = [
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "/ui.earth.com",
+    title: "CSV3",
+    des: "For quick editing of Csv files ",
+    img: "/Csv3.png",
+    iconLists: [
+      "/nuxt.svg",
+      "/tail.svg",
+      "/ts.svg",
+      "/pina.svg",
+      "/mongodb.svg",
+      "/nodejs.svg",
+      "/sass.svg",
+      "/html.svg",
+    ],
+    link: "https://csv3.netlify.app",
+    Device: {
+      mobile: false,
+      pc: true,
+    },
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "/ui.yoom.com",
+    title: "CSV2",
+    des: "For quick editing of Csv files",
+    img: "/Csv2.png",
+    iconLists: [
+      "/vue.svg",
+      "/pina.svg",
+      "/sass.svg",
+      "/html.svg",
+      "/nodejs.svg",
+      "/mongodb.svg",
+    ],
+    link: "https://csv2.netlify.app/",
+    Device: {
+      mobile: false,
+      pc: true,
+    },
   },
   {
     id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "/ui.aiimg.com",
+    title: "Chimney sweep weeks Planner (SFWP)",
+    des: "To save appointments for a 7-day week especially for chimney sweeps",
+    img: "/SFWP.jpeg",
+    iconLists: ["/vue.svg", "/html.svg", "/css.svg"],
+    link: "https://schornsteinfeger-wochenplaner.netlify.app/",
+    Device: {
+      mobile: true,
+      pc: false,
+    },
   },
   {
     id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "/ui.apple.com",
+    title: "Todolist",
+    des: "Fast saving of small tasks",
+    img: "/Todoliste.jpeg",
+    iconLists: ["/js.svg", "/html.svg", "/css.svg"],
+    link: "https://todoliste-lorenzo-rodorigo.netlify.app/",
+    Device: {
+      mobile: true,
+      pc: true,
+    },
   },
-];
+  {
+    id: 5,
+    title: "Website of Sylvia Rodorigo",
+    des: "Presents all the services of Sylvia Rodorigo",
+    img: "/SiviWeb.png",
+    iconLists: ["/js.svg", "/html.svg", "/css.svg"],
+    link: "https://clinquant-croissant-d8a253.netlify.app/",
+    Device: {
+      mobile: true,
+      pc: true,
+    },
+  },
+  {
+    id: 6,
+    title: "Omnifod",
+    des: "Presentation page for the Omnifod app",
+    img: "/Omnifod.png",
+    iconLists: ["/js.svg", "/html.svg", "/css.svg"],
+    link: "https://omnifood-lorenzo-rodorigo.netlify.app/",
+    Device: {
+      mobile: true,
+      pc: true,
+    },
+  },
+  {
+    id: 7,
+    title: "OneForkify",
+    des: "Search for the right recipe",
+    img: "/OneForkify.png",
+    iconLists: ["/js.svg", "/html.svg", "/css.svg"],
+    link: "https://forkify-rezepte-finder-lorenzo-rodorigo.netlify.app/",
+    Device: {
+      mobile: false,
+      pc: true,
+    },
+  },
+  {
+    id: 8,
+    title: "Mapty",
+    des: "Save your training routines",
+    img: "/Mapty.png",
+    iconLists: ["/js.svg", "/html.svg", "/css.svg"],
+    link: "https://mapty-lorenzo-rodorigo.netlify.app/",
+    Device: {
+      mobile: false,
+      pc: true,
+    },
+  },
+]
 
 export const testimonials = [
   {
@@ -135,7 +185,7 @@ export const testimonials = [
     name: "Michael Johnson",
     title: "Director of AlphaStream Technologies",
   },
-];
+]
 
 export const companies = [
   {
@@ -168,50 +218,28 @@ export const companies = [
     img: "/dock.svg",
     nameImg: "/dockerName.svg",
   },
-];
+]
 
 export const workExperience = [
   {
     id: 1,
-    title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+    title: "Fullstack Engineer Intern",
+    desc: "Design of new Layouts for the dashboard and optimization of the existing Layouts for mobile, tablet and desktop with Next.js and Material Ui",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
-  {
-    id: 2,
-    title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp2.svg",
-  },
-  {
-    id: 3,
-    title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp3.svg",
-  },
-  {
-    id: 4,
-    title: "Lead Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
-    className: "md:col-span-2",
-    thumbnail: "/exp4.svg",
-  },
-];
+]
 
 export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
+    link: "https://github.com/lollp18",
   },
+
   {
     id: 2,
-    img: "/twit.svg",
-  },
-  {
-    id: 3,
     img: "/link.svg",
+    link: "https://www.linkedin.com/in/lorenzo-rodorig/",
   },
-];
+]
