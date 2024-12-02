@@ -6,7 +6,7 @@ import { ThemeProvider } from "./provider"
 
 const inter = Inter({ subsets: ["latin"] })
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Lorenzo's Portfolio",
   script: [
     {

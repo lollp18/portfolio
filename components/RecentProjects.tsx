@@ -8,7 +8,7 @@ import React, { useRef, useEffect, useState } from "react"
 import { isMobile } from "react-device-detect"
 
 const DImage = ({ src }: { src: string }) => {
-  const imgRef = useRef(null)
+  const imgRef = useRef<HTMLImageElement>(null)
   let [SwitchWidth, setSwitchWidth] = useState("")
 
   useEffect(() => {
