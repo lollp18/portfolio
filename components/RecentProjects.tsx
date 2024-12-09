@@ -3,32 +3,10 @@
 import { FaLocationArrow } from "react-icons/fa6"
 
 import { projects } from "@/data"
-import { PinContainer } from "./ui/Pin"
+
 import React, { useRef, useEffect, useState } from "react"
 import { isMobile } from "react-device-detect"
 
-const DImage = ({ src }: { src: string }) => {
-  const imgRef = useRef<HTMLImageElement>(null)
-  let [SwitchWidth, setSwitchWidth] = useState("")
-
-  useEffect(() => {
-    if (imgRef.current) {
-      setSwitchWidth(
-        imgRef.current.offsetWidth > imgRef.current.offsetHeight
-          ? "w-full"
-          : "h-full"
-      )
-    }
-  }, [imgRef])
-
-  return (
-    <img
-      ref={imgRef}
-      src={src}
-      className={SwitchWidth}
-    />
-  )
-}
 const ProjectsLink = ({
   href,
   Device,
@@ -62,27 +40,49 @@ const ProjectsLink = ({
 }
 
 const RecentProjects = () => {
+  const [ImgWidth, setImgWidth] = useState(0)
+
+  const DImage = ({ src }: { src: string }) => {
+    const imgRef = useRef<HTMLImageElement>(null)
+    let [SwitchWidth, setSwitchWidth] = useState("")
+    useEffect(() => {
+      if (imgRef.current) {
+        setSwitchWidth(
+          imgRef.current.offsetWidth > imgRef.current.offsetHeight
+            ? "w-full mb-6"
+            : "h-full mb-6"
+        )
+        setImgWidth(imgRef.current.offsetWidth)
+      }
+    }, [imgRef])
+
+    return <></>
+  }
+
   return (
-    <div className="py-20">
-      <h1 className="heading">
+    <div
+      className="py-2  w-[90vw]  "
+      id="projects">
+      <h1 className="heading m-20">
         A selection of <span className="text-purple">recent projects</span>
       </h1>
-      <div className=" flex flex-col  items-center justify-center p-4 mt-10">
+      <div className=" flex flex-col  items-center justify-center gap-y-64  ">
         {projects.map((item) => (
           <div
-            className=" h-[82rem] flex items-center justify-center  w-[72vw]"
+            className=" flex items-center justify-center "
             key={item.id}>
-            <PinContainer>
-              <div className="relative flex items-center justify-center  w-[65vw] overflow-hidden h-[82vh]  mb-10 imgBakround ">
-                <DImage src={item.img} />
-              </div>
+            <div className="flex flex-col justify-start items-start p-7 w-full  rounded-2xl  shadow-[0_8px_16px_rgb(0_0_0/0.4)] border border-white/[0.1] shadow-white-100">
+              <img
+                src={item.img}
+                className="mb-4  object-scale-down rounded-2xl"
+              />
 
               <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
                 {item.title}
               </h1>
 
               <p
-                className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2"
+                className="lg:text-2xl md:text-xl text-base line-clamp-1 "
                 style={{
                   color: "#BEC1DD",
                   margin: "1vh 0",
@@ -90,15 +90,12 @@ const RecentProjects = () => {
                 {item.des}
               </p>
 
-              <div className="flex items-center justify-between mt-7 mb-3">
-                <div className="flex items-center">
+              <div className="flex  items-center justify-between mt-7 w-full ">
+                <div className="flex flex-wrap items-center ">
                   {item.iconLists.map((icon, index) => (
                     <div
                       key={index}
-                      className="border border-white/[.2] rounded-full bg-black lg:w-11 lg:h-11 w-10 h-10 flex justify-center items-center"
-                      style={{
-                        transform: `translateX(-${5 * index + 2}px)`,
-                      }}>
+                      className="border border-white/[.2] rounded-full bg-black lg:w-11 lg:h-11 w-10 h-10 flex justify-center items-center ml-2">
                       <img
                         src={icon}
                         alt="icon5"
@@ -119,7 +116,7 @@ const RecentProjects = () => {
                   />
                 </div>
               </div>
-            </PinContainer>
+            </div>
           </div>
         ))}
       </div>

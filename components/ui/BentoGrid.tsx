@@ -91,7 +91,7 @@ export const BentoGridItem = ({
             <img
               src={img}
               alt={img}
-              className={cn(imgClassName, "object-cover object-center ")}
+              className={cn(imgClassName, " ")}
             />
           )}
         </div>
@@ -147,10 +147,8 @@ export const BentoGridItem = ({
                     {item}
                   </span>
                 ))}
-              
               </div>
               <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
-              
                 {rightLists.map((item, i) => (
                   <span
                     key={i}

@@ -10,18 +10,19 @@ export const gridItems = [
     id: 1,
     title: "Currently building a FullStack App Like Excel",
     description: "The Inside Scoop",
-    className: "md:col-span-4 md:row-span-6",
-    imgClassName: "   absolute right-3 top-0 md:w-96 w-60",
-    titleClassName: "justify-center md:justify-start lg:justify-center",
+    className: "md:col-span-6 md:row-span-6",
+    imgClassName:
+      "absolute right-3 top-0 w-1/2 md:w-96 max-[437px]:object-left max-[437px]:-right-2/4	max-[437px]:w-full 	 ",
+    titleClassName: "w-1/2 ",
     img: "/Csv3 -c.png",
-    spareImg: "/grid.svg",
+    spareImg: "",
   },
 
   {
     id: 3,
     title: "My tech stack",
     description: "",
-    className: "lg:col-span-3 md:col-span-3 md:row-span-5",
+    className: "lg:col-span-3 md:col-span-3 md:row-span-5 ",
     imgClassName: "",
     titleClassName: "justify-center",
     img: "",
@@ -84,7 +85,7 @@ export const projects = [
     id: 3,
     title: "Chimney sweep weeks Planner (SFWP)",
     des: "To save appointments for a 7-day week especially for chimney sweeps",
-    img: "/SFWP.jpeg",
+    img: "/SFWP.png",
     iconLists: ["/vue.svg", "/html.svg", "/css.svg"],
     link: "https://schornsteinfeger-wochenplaner.netlify.app/",
     Device: {
