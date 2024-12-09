@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="flex gap-5 md:text-base text-sm md:font-normal font-light">
           <a
             className="p-2 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
-            href="+4901718678312">
+            href="https://+4901718678312">
             <img
               src="/call.svg"
               alt="icons"
@@ -25,7 +25,7 @@ const Footer = () => {
           </a>
           <a
             className="p-2 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
-            href="lorenzo123696@gmail.com">
+            href="https://lorenzo123696@gmail.com">
             <img
               src="/mail.svg"
               alt="icons"
